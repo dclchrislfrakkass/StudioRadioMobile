@@ -1,0 +1,271 @@
+/*
+Theme Name:     studioRadioMobile
+Description:    theme from mediacoms
+Author:         christophe lacroix
+Template:       mediacoms
+Author URI:     https://lacroix-c.fr
+
+(optional values you can add: Theme URI, Author URI, Version, License, License URI, Tags, Text Domain)
+*/
+
+header {
+    width: 100%;
+    height: 44rem;
+    padding-top: 3.18675rem;
+    background-color: #cd8135;
+}
+
+
+header .container,
+header .container-fuid,
+header .row {
+    height: 100%;
+}
+
+.headerVideo {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 46rem;
+
+    text-align: right;
+}
+
+.headerText {
+    z-index: 3;
+    position: relative;
+}
+
+.headerGradient {
+    z-index: 2;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 46rem;
+
+/* For Safari 5.1 to 6.0 */
+background: -webkit-linear-gradient(90deg, #cd8135 0%, #cd8135 15%, rgba(205, 129, 53, 0) 78%, rgba(205, 129, 53, 0) 100%);
+/* For Opera 11.1 to 12.0 */
+background: -o-linear-gradient(90deg, #cd8135 0%, #cd8135 15%, rgba(205, 129, 53, 0) 78%, rgba(205, 129, 53, 0) 100%);
+/* For Firefox 3.6 to 15 */
+background: -moz-linear-gradient(90deg, #cd8135 0%, #cd8135 15%, rgba(205, 129, 53, 0) 78%, rgba(205, 129, 53, 0) 100%);
+
+background-image: linear-gradient(90deg, #cd8135 0%, #cd8135 15%, rgba(205, 129, 53, 0) 78%, rgba(205, 129, 53, 0) 100%);
+}
+
+
+.headerGradient270 {
+    z-index: 2;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 33.875rem;
+
+/* For Safari 5.1 to 6.0 */
+background: -webkit-linear-gradient(270deg, #cd8135 0%, #cd8135 15%, rgba(205, 129, 53, 0) 78%, rgba(205, 129, 53, 0) 100%);
+/* For Opera 11.1 to 12.0 */
+background: -o-linear-gradient(270deg, #cd8135 0%, #cd8135 15%, rgba(205, 129, 53, 0) 78%, rgba(205, 129, 53, 0) 100%);
+/* For Firefox 3.6 to 15 */
+background: -moz-linear-gradient(270deg, #cd8135 0%, #cd8135 15%, rgba(205, 129, 53, 0) 78%, rgba(205, 129, 53, 0) 100%);
+
+background-image: linear-gradient(270deg, #cd8135 0%, #cd8135 15%, rgba(205, 129, 53, 0) 78%, rgba(205, 129, 53, 0) 100%);
+}
+
+
+.mediaQuery-center-end {
+    align-self: center;
+}
+
+
+
+
+
+
+
+
+/* ********* MEDIA QUERIES ********* */
+/* ************************************ */
+
+@media screen and (max-width: 540px) {
+    .mediaQuery-center-end {
+        align-self: flex-end;
+        padding-bottom: 3rem;
+    }
+    header {
+        width: 100%;
+        height: 37rem;
+        padding-top: 3.18675rem;
+        background-color: #cd8135;
+    }
+    .headerVideo {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 37rem;
+
+        text-align: right;
+    }
+    .headerGradient {
+        z-index: 2;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 37rem;
+
+    /* For Safari 5.1 to 6.0 */
+    background: -webkit-linear-gradient(90deg, #cd8135 0%, #cd8135 15%, rgba(205, 129, 53, 0) 78%, rgba(205, 129, 53, 0) 100%);
+    /* For Opera 11.1 to 12.0 */
+    background: -o-linear-gradient(90deg, #cd8135 0%, #cd8135 15%, rgba(205, 129, 53, 0) 78%, rgba(205, 129, 53, 0) 100%);
+    /* For Firefox 3.6 to 15 */
+    background: -moz-linear-gradient(90deg, #cd8135 0%, #cd8135 15%, rgba(205, 129, 53, 0) 78%, rgba(205, 129, 53, 0) 100%);
+
+    background-image: linear-gradient(90deg, #cd8135 0%, #cd8135 15%, rgba(205, 129, 53, 0) 78%, rgba(205, 129, 53, 0) 100%);
+    }
+
+    .headerTitleBold {
+        font-weight: 800;
+        font-size: 3.5rem;
+        line-height: 2rem;
+        opacity: 0.4;
+
+        padding: 0;
+        margin: 0;
+    }
+
+    .headerTitleLight {
+        font-weight: 300;
+        font-size: 3rem;
+        line-height: 2rem;
+        opacity: 0.8;
+
+        padding: 0;
+        margin: 0;
+    }
+}
+
+/* ************************************ */
+/* ************************************ */
+
+@media screen and (max-width: 992px) {
+    .mediaQuery-center-end {
+        align-self: flex-end;
+        padding-bottom: 3rem;
+    }
+    header {
+        width: 100%;
+        height: 38rem;
+        padding-top: 6rem;
+
+        background-color: #cd8135;
+    }
+    .headerVideo {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 38rem;
+
+        text-align: right;
+    }
+    .headerGradient {
+        z-index: 2;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 38rem;
+
+    /* For Safari 5.1 to 6.0 */
+    background: -webkit-linear-gradient(90deg, #cd8135 0%, #cd8135 15%, rgba(205, 129, 53, 0) 78%, rgba(205, 129, 53, 0) 100%);
+    /* For Opera 11.1 to 12.0 */
+    background: -o-linear-gradient(90deg, #cd8135 0%, #cd8135 15%, rgba(205, 129, 53, 0) 78%, rgba(205, 129, 53, 0) 100%);
+    /* For Firefox 3.6 to 15 */
+    background: -moz-linear-gradient(90deg, #cd8135 0%, #cd8135 15%, rgba(205, 129, 53, 0) 78%, rgba(205, 129, 53, 0) 100%);
+
+    background-image: linear-gradient(90deg, #cd8135 0%, #cd8135 15%, rgba(205, 129, 53, 0) 78%, rgba(205, 129, 53, 0) 100%);
+    }
+    .headerTitleBold {
+        font-weight: 800;
+        font-size: 6rem;
+        line-height: 4.5rem;
+        opacity: 0.4;
+
+        padding: 0;
+        margin: 0;
+    }
+
+    .headerTitleLight {
+        font-weight: 300;
+        font-size: 4rem;
+        line-height: 2rem;
+        opacity: 0.8;
+
+        padding: 0;
+        margin: 0;
+    }
+}
+
+
+@media screen and (max-width: 524px) {
+    .mediaQuery-center-end {
+        align-self: flex-end;
+        padding-bottom: 3rem;
+    }
+    header {
+        width: 100%;
+        height: 35rem;
+        padding-top: 3.18675rem;
+        background-color: #cd8135;
+    }
+    .headerVideo {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 38rem;
+
+        text-align: right;
+    }
+    .headerGradient {
+        z-index: 2;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 38rem;
+
+    /* For Safari 5.1 to 6.0 */
+    background: -webkit-linear-gradient(90deg, #cd8135 0%, #cd8135 15%, rgba(205, 129, 53, 0) 78%, rgba(205, 129, 53, 0) 100%);
+    /* For Opera 11.1 to 12.0 */
+    background: -o-linear-gradient(90deg, #cd8135 0%, #cd8135 15%, rgba(205, 129, 53, 0) 78%, rgba(205, 129, 53, 0) 100%);
+    /* For Firefox 3.6 to 15 */
+    background: -moz-linear-gradient(90deg, #cd8135 0%, #cd8135 15%, rgba(205, 129, 53, 0) 78%, rgba(205, 129, 53, 0) 100%);
+
+    background-image: linear-gradient(90deg, #cd8135 0%, #cd8135 15%, rgba(205, 129, 53, 0) 78%, rgba(205, 129, 53, 0) 100%);
+    }
+
+    .headerTitleBold {
+        font-weight: 800;
+        font-size: 3rem;
+        line-height: 3rem;
+        opacity: 0.4;
+
+        padding: 0;
+        margin: 0;
+    }
+
+    .headerTitleLight {
+        font-weight: 300;
+        font-size: 2.75rem;
+        line-height: 1.25rem;
+        opacity: 0.8;
+
+        padding: 0;
+        margin: 0;
+    }
+}
