@@ -8,18 +8,7 @@
 <!-- *********************************** -->
 <?php 
 $currentClassName = get_the_title(); ?>
-<header class="header-Print">
-	<div class="container headerText">
-		<div class="row">
-			<div class="col headerContent">
-				<h1 class="headerTitleContent text-white anim-2"><?php echo( $currentClassName) ?></h1>
-			</div>
-		</div>
-	</div>
-	<!-- Dégragé au dessus de la vidéo pour lisser les couleurs -->
-	<!--<div class="container-fluid headerGradient">-->
-	</div>
-</header>
+
 
 
 <main>
