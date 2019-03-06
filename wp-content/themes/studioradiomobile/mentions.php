@@ -1,30 +1,4 @@
 <?php /* Template name: mentions */ ?>
-<style>
-html {
-scroll-behavior: smooth;
-}
-
-#btnUp {
-display: none;
-position: fixed;
-bottom: 20px;
-right: 30px;
-z-index: 99;
-font-size: 18px;
-border: none;
-outline: none;
-background-color: #e85a32;
-color: white;
-cursor: pointer;
-padding: 15px;
-border-radius: 4px;
-}
-
-#btnUp:hover {
-background-color: #ffa500;
-}
-</style>
-
 
 <?php get_header(); ?>
 
