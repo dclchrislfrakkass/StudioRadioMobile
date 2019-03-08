@@ -132,7 +132,7 @@ $user_status = get_user_meta( $user_id, $key, $single );
 
 <!--
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-le code pour la page d'accès et la comparaison de status //CODE UTILISE //
+le code pour la page d'accès et la comparaison de status //CODE UTILISE AVANT REGROUPEMENT DES UTILISATEURS//
 -->
 <?php
 global $current_user;
@@ -306,21 +306,81 @@ if (!is_user_logged_in()) {
 
 <!--
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-acces eleve
+acces eleve  // OK
 -->
 
 
 <?php
 global $current_user;
     get_currentuserinfo();
-if (!is_user_logged_in()) {
-    $url = 'http://studioradiomobile.test/eleve';
-    wp_redirect( $url );
-    exit;
+if (is_user_logged_in()) {
+    echo "<div class='column'>";
+    echo "<a href='http://studioradiomobile.test:8080/eleve/' class='btn btn-warning' role='button'><span class='button-text'><i class='fa fa-caret-right' aria-hidden='true'></i> Accès</span>";
+    echo "</span>";
+    echo "</a>";
+    echo "<br/><br/>";
+    $link = wp_logout_url(get_permalink());
+    echo "<a class='btn btn-warning mx-auto' href='".$link."'>Déconnexion</a>";
+    echo "</div>";
+ 
     
 } else {
+
+
     echo "<div class='row'>";
-    echo do_shortcode('[wpmem_form register]');
-    echo do_shortcode('[wpmem_form login]');
+    echo "<a href='#' id='wow-modal-id-1' class='btn btn-warning' role='button'><span class='button-text'><i class='fa fa-caret-right' aria-hidden='true'></i> Accès</span></a></div>";
+      echo "</div>";
+}
+?>
+
+<!--
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+acces professeur  // OK
+-->
+<?php
+global $current_user;
+    get_currentuserinfo();
+if (is_user_logged_in()) {
+    echo "<div class='column'>";
+    echo "<a href='http://studioradiomobile.test:8080/professeur/' class='btn btn-warning' role='button'><span class='button-text'><i class='fa fa-caret-right' aria-hidden='true'></i> Accès</span>";
+    echo "</span>";
+    echo "</a>";
+    echo "<br/><br/>";
+    $link = wp_logout_url(get_permalink());
+    echo "<a class='btn btn-warning mx-auto' href='".$link."'>Déconnexion</a>";
+    echo "</div>";
+ 
+    
+} else {
+
+
+    echo "<div class='row'>";
+    echo "<a href='#' id='wow-modal-id-1' class='btn btn-warning' role='button'><span class='button-text'><i class='fa fa-caret-right' aria-hidden='true'></i> Accès</span></a></div>";
     echo "</div>";
 }
+?>
+
+
+<!--
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+acces proviseur  // OK
+-->
+<?php
+global $current_user;
+    get_currentuserinfo();
+if (is_user_logged_in()) {
+    ?>
+    <a href="http://studioradiomobile.test:8080/proviseur/" class="btn btn-warning" role="button"><i class="fa fa-caret-right" aria-hidden="true"></i> Accès</a>
+    <?php
+
+
+ 
+    
+} else {
+
+
+    echo "<div class='row'>";
+    echo "<a href='#' id='wow-modal-id-1' class='btn btn-warning' role='button'><span class='button-text'><i class='fa fa-caret-right' aria-hidden='true'></i> Accès</span></a></div>";
+    echo "</div>";
+}
+?>
