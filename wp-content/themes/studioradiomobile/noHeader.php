@@ -1,6 +1,10 @@
 <?php /* Template name: noHeader */ ?>
+<style>
+main {
+    justify-content: center;
+}
 
-
+</style>
 <?php get_header(); ?>
 <!-- *********************************** -->
 <!-- ************* Header ************* -->
@@ -9,10 +13,8 @@
 $currentClassName = get_the_title(); ?>
 
 
-<main>
-    <!-- ************* Présentation ************* -->
-    <!-- ***************************************** -->
-	
+<main class="d-flex auto-mx mt-5">
+
 
     <!--button to scroll up -->
     <button onclick="topFunction()" id="btnUp" title="Go to top">Top</button>

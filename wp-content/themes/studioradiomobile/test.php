@@ -277,3 +277,50 @@ echo "<span class='elementor-button-content-wrapper'>";
 <?php
 }
 ?>
+
+
+
+<!--
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Code simplifié de connexion/deconnexion 
+-->
+
+
+
+
+<?php
+global $current_user;
+    get_currentuserinfo();
+if (!is_user_logged_in()) {
+    echo "<div class='row'>";
+    echo do_shortcode('[wpmem_form register]');
+    echo do_shortcode('[wpmem_form login]');
+    echo "</div>";
+} else {
+    ?>
+    <a class="btn btn-warning mx-auto" href="<?php echo wp_logout_url(get_permalink()); ?>">Déconnexion</a>
+    <?php
+    }
+    ?>
+
+
+<!--
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+acces eleve
+-->
+
+
+<?php
+global $current_user;
+    get_currentuserinfo();
+if (!is_user_logged_in()) {
+    $url = 'http://studioradiomobile.test/eleve';
+    wp_redirect( $url );
+    exit;
+    
+} else {
+    echo "<div class='row'>";
+    echo do_shortcode('[wpmem_form register]');
+    echo do_shortcode('[wpmem_form login]');
+    echo "</div>";
+}
