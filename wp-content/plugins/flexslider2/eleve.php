@@ -17,7 +17,7 @@
 var_dump($dir);
 echo '<br/>';
 echo site_url();
-echo plugin_dir_path();
+
 var_dump($dir);
 var_dump($dirB);
 var_dump($dirC);

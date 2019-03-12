@@ -8,12 +8,12 @@ Author: Lacroix christophe
 Author URI: https://lacroix-c.fr
 */
 
-// define ( 'DEV_URL', plugin_dir_path ());
+// define ( 'DEV_URL', plugin_dir_url ());
 global $wpdb;
 
 plugins_url( '/js/modernizr.js', __FILE__ );
 
-$dir = plugin_dir_path( '/css/style.css', __FILE__ );
+$dir = plugin_dir_url( '/css/style.css', __FILE__ );
 
 // $dirC = WP_PLUGIN_DIR();
 
@@ -24,30 +24,30 @@ function shortcode_flexSlide(){
 
 add_shortcode('flexSlide', 'shortcode_flexSlide');
 
-$url = plugins_url();
 
 
 
-// function flexSlideCss(){
-//     // wp_enqueue_style( 'style', WP_PLUGIN_DIR );
-//     wp_enqueue_style( 'bootstrap',  plugins_dir_url( '/css/bootstrap.min.css', __FILE__ ) );
-//     wp_enqueue_style( 'style',  plugin_dir_url( '/css/style.css',  __FILE__ ) );
-//     wp_enqueue_style( 'flexslider',  plugin_dir_url( __FILE__ ) . '/flexslider.css');
-// }
 
-// add_action('wp_head', 'flexSlideCss');
+function flexSlideCss(){
+    // wp_enqueue_style( 'style', WP_PLUGIN_DIR );
+    wp_enqueue_style( 'bootstrap',  plugins_url( 'css/bootstrap.min.css', __FILE__ ) );
+    wp_enqueue_style( 'style',  plugins_url( 'css/style.css',  __FILE__ ) );
+    wp_enqueue_style( 'flexslider',  plugins_url( 'css/flexslider.css',__FILE__ )  );
+}
+
+add_action('wp_enqueue_scripts', 'flexSlideCss');
     
 
-// function add_scripts() {
-
-//     wp_enqueue_script( 'script',  plugin_dir_url( __FILE__ ) . '/js/script.js');
-//     wp_enqueue_script( 'modrn',  plugin_dir_url( __FILE__ ) . '/js/modernizr.js');
-//     wp_enqueue_script( 'jsCore',  plugin_dir_path( __FILE__ ) . '/js/shCore.js');
-//     wp_enqueue_script( 'jsbrushX',  plugin_dir_path( __FILE__ ) . '/js/shBrushXml.js');
-//     wp_enqueue_script( 'jsbrushJS',  plugin_dir_path( __FILE__ ) . '/js/shBrushJScript.js');
-//     wp_enqueue_script( 'jsDemo',  plugin_dir_path( __FILE__ ) . '/js/demo.js');
+function add_scripts() {
+    
+    wp_enqueue_script( 'jsDemo',  plugins_url('/js/demo.js', __FILE__ )  );
+    wp_enqueue_script( 'jquery.flexslider',  plugins_url('js/jquery.flexslider.js', __FILE__ ) );
+    wp_enqueue_script( 'modrn',  plugins_url('/js/modernizr.js', __FILE__ ) );
+    wp_enqueue_script( 'jsCore',  plugins_url('/js/shCore.js', __FILE__ )  );
+    wp_enqueue_script( 'jsbrushX',  plugins_url( '/js/shBrushXml.js', __FILE__ )  );
+    wp_enqueue_script( 'jsbrushJS',  plugins_url( '/js/shBrushJScript.js', __FILE__ ) );
        
     
-// }
-// add_action('wp_enqueue_scripts', 'add_scripts');
+}
+add_action('wp_enqueue_scripts', 'add_scripts');
 ?>
