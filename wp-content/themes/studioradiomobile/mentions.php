@@ -12,12 +12,17 @@ $currentClassName = get_the_title(); ?>
 
 
 <main>
-    <!-- ************* Présentation ************* -->
-    <!-- ***************************************** -->
+
+
+
+
+
+
+
 
 
     <!--button to scroll up -->
-    <button onclick="topFunction()" id="btnUp" title="Go to top">Top</button>
+    <button onclick="topFunction()" id="btnUp" title="Go to top"><i class="fas fa-angle-double-up"></i></button>
 
     <script>
     // after scrolling down from 20px, button become visible

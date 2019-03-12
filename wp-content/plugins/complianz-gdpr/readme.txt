@@ -6,12 +6,12 @@ Requires at least: 4.6
 License: GPL2
 Requires PHP: 5.6
 Tested up to: 5.1
-Stable tag: 2.1.7
+Stable tag: 2.1.8
 
-Complianz | GDPR Cookie Consent supports GDPR, RGPD, CCPA, DSVGO, AVG with Cookie Consent, Cookie Notice and a customized Cookie Policy based on the results of the built-in Cookie Scan.
+Complianz | GDPR Cookie Consent supports GDPR, RGPD, CCPA, DSVGO, AVG, RGPD with Cookie Consent, Cookie Notice and a customized Cookie Policy based on the results of the built-in Cookie Scan.
 
 == Description ==
-Complianz | GDPR Cookie Consent supports GDPR, CCPA, DSVGO, AVG and more with a conditional Cookie Notice and customized Cookie Policy based on the results of the built in Cookie Scan. Blocking 3rd Party Cookies from all major 3rd Party services and social services like Google Analytics, Adsense, TagManager, Facebook, Youtube, Instagram, Vimeo and more. You can configure for US (United States) visitors or European Union (EU) visitors.
+Complianz | GDPR Cookie Consent supports GDPR, RGPD, CCPA, DSVGO, AVG, RGPD and more with a conditional Cookie Notice and customized Cookie Policy based on the results of the built in Cookie Scan. Blocking 3rd Party Cookies from all major 3rd Party services and social services like Google Analytics, Adsense, TagManager, Facebook, Youtube, Instagram, Vimeo and more. You can configure for US (United States) visitors or European Union (EU) visitors.
 
 IMPORTANT! Complianz | GDPR Cookie Consent can help you meet compliance requirements, but you as user must ensure that all requirements are met.
 
@@ -86,6 +86,10 @@ The Children’s Online Privacy Protection Act (COPPA) is a law designed to prot
 With some custom css this is possible, but we do not consider a cookie wall to be GDPR compliant, so it's not actively supported.
 
 == Change log ==
+= 2.1.8 =
+* Tweak: improve escaping of css in document html output
+* Tweak: improved Elementor and Gutenberg compatibility for youtube video activation after consent is given
+
 = 2.1.7 =
 * Fix: typo in block.php cause Gutenberg to fail
 

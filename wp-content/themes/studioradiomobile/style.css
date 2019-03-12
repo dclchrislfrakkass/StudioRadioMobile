@@ -75,6 +75,16 @@ background: -moz-linear-gradient(270deg, #cd8135 0%, #cd8135 15%, rgba(205, 129,
 background-image: linear-gradient(270deg, #cd8135 0%, #cd8135 15%, rgba(205, 129, 53, 0) 78%, rgba(205, 129, 53, 0) 100%);
 }
 
+.page-template-noHeaderFullWidth .content-area {
+    width: 100%;
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+}
+ 
+.page-template-noHeaderFullWidth .site {
+margin:0px;
+}
 
 .mediaQuery-center-end {
     align-self: center;

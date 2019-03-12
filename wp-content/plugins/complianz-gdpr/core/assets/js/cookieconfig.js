@@ -85,26 +85,33 @@ jQuery(document).ready(function ($) {
     setBlockedContentContainerAspectRatio();
     function setBlockedContentContainerAspectRatio() {
         $('.cmplz-video').each(function() {
+            var blockedContentContainer = $(this);
             var resetPadding = false;
 
-            // //in some theme's, we have a wrapper div with a padding for the video responsiveness. We need to temporarily disalbe this
-            var grandParent = $(this).parent().parent();
+            //in some theme's, we have a wrapper div with a padding for the video responsiveness. We need to temporarily disalbe this
+            var grandParent = blockedContentContainer.parent().parent();
             var gpPadding = getActualCSS(grandParent, 'paddingTop');
 
-            if (isVideoPadding(gpPadding) && grandParent.children().length==1) {
+            if (isVideoPadding(gpPadding) && grandParent.children().length===1) {
                 resetPadding = gpPadding;
                 grandParent.css('padding-top', '10px');
             }
 
-            var parent = $(this).parent();
+            var parent = blockedContentContainer.parent();
             var pPadding = getActualCSS(parent, 'paddingTop');
             if (isVideoPadding(pPadding) && parent.children().length) {
                 if (!resetPadding) resetPadding = pPadding;
                 parent.css('padding-top', '10px');
             }
 
-            var blockedContentContainer = $(this);
-            var src = $(this).css('background-image');
+            //gutenberg
+            if (parent.hasClass('wp-block-embed__wrapper')) {
+                //gutenberg icw fitvids should not use reset padding.
+                if (!jQuery.fn.fitVids) resetPadding = '56.25%';
+                parent.addClass('cmplz-clear-padding');
+            }
+
+            var src = blockedContentContainer.css('background-image');
             if (src.length) {
                 src = src.replace('url(', '').replace(')', '').replace(/\"/gi, "");
 
@@ -117,13 +124,13 @@ jQuery(document).ready(function ($) {
                     if (imgWidth === 0) imgWidth = 1;
                     var w = blockedContentContainer.width();
                     var h = imgHeight * (w / imgWidth);
-                    if (resetPadding) {
+                    if (resetPadding && !blockedContentContainer.parent().hasClass('elementor-text-editor')) {
                         blockedContentContainer.css('padding-top', resetPadding);
                     } else {
                         blockedContentContainer.height(h);
                     }
                 });
-                img.src = src;
+                if (src && src.length) img.src = src;
             }
 
         });
@@ -168,13 +175,14 @@ jQuery(document).ready(function ($) {
         });
 
         $('.cmplz-video').each(function (i, obj) {
-            //reset video height adjustments
-            $(this).height('inherit');
-
+            //reset video height adjustments, but not for elementor
+            if (!$(this).parent().hasClass('elementor-wrapper') && !$(this).parent().hasClass('wp-block-embed__wrapper')) $(this).height('inherit');
         });
 
         //iframes
         $('.cmplz-iframe').each(function (i, obj) {
+
+            $(this).removeClass('cmplz-iframe-styles');
             var src = $(this).data('src-cmplz');
             $(this).attr('src', src);
 
@@ -669,13 +677,11 @@ jQuery(document).ready(function ($) {
     }
 
     function cmplzSetCookie(name, value, days) {
-        var expires = "";
         var secure = ";secure";
-        if (days) {
-            var date = new Date();
-            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-            var expires = ";expires=" + date.toGMTString();
-        }
+
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        var expires = ";expires=" + date.toGMTString();
 
         if (window.location.protocol !== "https:") secure = '';
 
